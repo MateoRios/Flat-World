@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="css/estilos.css">
 		<link rel="stylesheet" href="font/css/font-awesome.min.css">
 	</head>
-	<body onload="animacion()"; onresize="resize()";>
+	<body onload="initPlaya()"; onresize="resize()";>
 		<header>
 			<h1>Flat World</h1>
 			<nav id="menu">
@@ -23,25 +23,23 @@
 		</header>
 		<main>
 
-			<!-- montanyas -->
-			<section><img src="img/mountain/mountain.png" alt="montanya"></section>
-			<section><img src="img/mountain/mountain2.png" alt="montanya"></section>
-			<section><img src="img/mountain/mountain3.png" alt="montanya"></section>
-			<section><img src="img/mountain/mountain4.png" alt="montanya"></section>
-			<section><img src="img/mountain/mountain5.png" alt="montanya"></section>
+			<!-- oceano </!-->
+			<div id="oceano"></div>
 
-			<!-- paisaje -->
-			<div id="paisaje"></div>
-			<div id="paisaje2"></div>
+			<!-- orilla playa </!-->
+			<div id="orilla"></div>
+
+			<!-- monticulo playa </!-->
+			<div id="monticuloIzq"></div>
+			<div id="monticuloDer"></div>
+
+			<!-- tumbona </!-->
+			<div id="tumbona"></div>
 
 			<!-- nubes -->
 			<div id="nub1"><img src="img/cielo/nube.png" alt="nube"></div>
-			<div id="nub2"><img src="img/cielo/nube2.png" alt="nube"></div>
-			<div id="nub3"><img src="img/cielo/nube2.png" alt="nube"></div>
+			<div id="nub2"><img src="img/cielo/nube.png" alt="nube"></div>
 			<div id="nub4"><img src="img/cielo/nube.png" alt="nube"></div>
-
-			<!-- sol -->
-			<div id="sol"><img src="img/cielo/sun.png" alt="sol"><img src="img/cielo/sunGiro.png" alt=""></div>
 
 		</main>
 		<script src="js/funciones.js"></script>

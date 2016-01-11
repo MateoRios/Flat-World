@@ -8,60 +8,68 @@ var sol = document.getElementById('sol');
 var paisaje = document.getElementById('paisaje');
 var paisaje2 = document.getElementById('paisaje2');
 var oculto = true;
+var animMont = true;
 
 // ocultamos las montanyas antes de realizar la animacion
-m.style.left = '-'+1000+'px';
-m1.style.right = '-'+1000+'px';
-m2.style.left = '-'+1000+'px';
-m3.style.right = '-'+1000+'px';
-m4.style.left = '-'+1000+'px';
+if(m!=null && m1!=null && m2!=null && m3!=null && m4!=null){
+	m.style.left = '-'+1000+'px';
+	m1.style.right = '-'+1000+'px';
+	m2.style.left = '-'+1000+'px';
+	m3.style.right = '-'+1000+'px';
+	m4.style.left = '-'+1000+'px';
+	animMont = true;
+}else{
+	animMont = false;
+}
 
 function animacion(){
 	
-	// animacion montanyas
-	m.style.transition = "all 1s";
-	m.style.left = '-'+350+'px';
+	if(animMont == true){
+		// animacion montanyas
+		m.style.transition = "all 1s";
+		m.style.left = '-'+350+'px';
 
-	m1.style.transition = "all 1.6s";
-	m1.style.right = '-'+200+'px';
+		m1.style.transition = "all 1.6s";
+		m1.style.right = '-'+200+'px';
 
-	m2.style.transition = "all 1.9s";
-	m2.style.left = '-'+200+'px';
+		m2.style.transition = "all 1.9s";
+		m2.style.left = '-'+200+'px';
 
-	m3.style.transition = "all 2.5s";
-	m3.style.right = '-'+400+'px';
+		m3.style.transition = "all 2.5s";
+		m3.style.right = '-'+400+'px';
 
-	m4.style.transition = "all 2.8s";
-	m4.style.left = '-'+22+'%';
+		m4.style.transition = "all 2.8s";
+		m4.style.left = '-'+22+'%';
 
-	// animacion sol
-	sol.style.transition = "all 4.5s";
-	sol.style.bottom = 50+'px';
-
-	// animacion paisaje
-	paisaje.style.transition = "all 6s";
-	paisaje.style.bottom = '-'+65+'%';
-
-	paisaje2.style.transition = "all 7s";
-	paisaje2.style.bottom = '-'+65+'%';
-
-	if(window.innerHeight >= 875){
-
-		m2.style.bottom = "10%";
-		m3.style.bottom = "20%";
-		m4.style.bottom = "25%";
-
+		// animacion sol
 		sol.style.transition = "all 4.5s";
-		sol.style.bottom = 15+'%';
-	}
+		sol.style.bottom = 50+'px';
 
-	if(window.innerWidth >= 1550){
+		// animacion paisaje
+		paisaje.style.transition = "all 6s";
+		paisaje.style.bottom = '-'+65+'%';
 
-		m3.style.transition = "all 3s";
-		m3.style.right = '-'+15+'%';
+		paisaje2.style.transition = "all 7s";
+		paisaje2.style.bottom = '-'+65+'%';
 
-		m4.style.transition = "all 3.8s";
-		m4.style.left = '-'+13+'%';
+		if(window.innerHeight >= 875){
+
+			m2.style.bottom = "10%";
+			m3.style.bottom = "20%";
+			m4.style.bottom = "25%";
+
+			sol.style.transition = "all 4.5s";
+			sol.style.bottom = 15+'%';
+		}
+
+		if(window.innerWidth >= 1550){
+
+			m3.style.transition = "all 3s";
+			m3.style.right = '-'+15+'%';
+
+			m4.style.transition = "all 3.8s";
+			m4.style.left = '-'+13+'%';
+		}
 	}
 }
 
@@ -101,15 +109,35 @@ function abreMenu(){
 	var menu = document.getElementById('menu');
 	var boton = document.getElementById('botonMenu');
 
-	if(oculto == true){
-		menu.style.left = 0+'px';
-		boton.style.left = 135+'px';
-		boton.className = 'fa fa-times';
-		oculto = false;
-	}else{
-		menu.style.left = -135+'px';
-		boton.style.left = 0+'px';
-		boton.className = 'fa fa-bars';
-		oculto = true;
+	if(menu != null && boton != null){
+		if(oculto == true){
+			menu.style.left = 0+'px';
+			boton.style.left = 135+'px';
+			boton.className = 'fa fa-times';
+			oculto = false;
+		}else{
+			menu.style.left = -135+'px';
+			boton.style.left = 0+'px';
+			boton.className = 'fa fa-bars';
+			oculto = true;
+		}
+	}
+}
+
+//**************************************************** FUNCIONES PLAYA
+var orilla = document.getElementById('orilla');
+var oceano = document.getElementById('oceano');
+var monti = document.getElementById('monticuloIzq');
+var monti2 = document.getElementById('monticuloDer');
+var tumbona = document.getElementById('tumbona');
+
+function initPlaya(){
+
+	if (orilla!=null && oceano!=null && monticuloIzq!=null && monticuloDer!=null && tumbona!=null) {
+		orilla.style.bottom = 0;
+		oceano.style.bottom = 0;
+		monticuloIzq.style.bottom = '-20px';
+		monticuloDer.style.bottom = '-20px';
+		tumbona.style.bottom = '25%';
 	}
 }

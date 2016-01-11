@@ -12,9 +12,7 @@ html, body, main{
 	overflow: hidden;
 }
 body{
-	background-image: url('../img/cielo/cielo.png');
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #C5EFF7;
 }
 header{
 	div{
@@ -74,12 +72,13 @@ nav{
 				font-size: small;
 			}
 			a:hover{
-				/*text-decoration: underline;*/
 				color: #999;
 			}
 		}
 	}
 }
+
+/************************************************** PAISAJE MONTANYAS */
 section{
 	position: absolute;
 }
@@ -196,4 +195,48 @@ main>div>img{
 	100%{
 		left: 1900px;
 	}
+}
+
+/****************************************************** PAISAJE PLAYA */
+#orilla{
+	width: 100%;
+	background-color: #F4B350;
+	display: block;
+	height: 200px;
+	bottom: -200px;
+	transition: all 2s ease;
+}
+#oceano{
+	background-color: #1E8BC3;
+	width: 100%;
+	display: block;
+	height: 300px;
+	bottom: -300px;
+	transition: all 2.5s ease;
+}
+#monticuloIzq{
+	background-color: rgb(255, 195, 103);
+    height: 240px;
+    width: 440px;
+    bottom: -240px;
+    border-top-right-radius: 100%;
+    transition: all 2.5s ease;
+}
+#monticuloDer{
+	background-color: rgb(255, 195, 103);
+    height: 240px;
+    width: 440px;
+    bottom: -240px;
+    right: 0;
+    border-top-left-radius: 100%;
+    transition: all 2.5s ease;
+}
+#tumbona{
+	background-image: url('../img/playa/tumbona.png');
+	background-size: cover;
+	height: 51px;
+	width: 250px;
+	left: 30%;
+	bottom: -25%;
+	transition: all 2.5s ease;
 }
