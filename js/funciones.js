@@ -7,6 +7,7 @@ var m4 = main.querySelector("section:nth-child(5)");
 var sol = document.getElementById('sol');
 var paisaje = document.getElementById('paisaje');
 var paisaje2 = document.getElementById('paisaje2');
+var oculto = true;
 
 // ocultamos las montanyas antes de realizar la animacion
 m.style.left = '-'+1000+'px';
@@ -91,5 +92,24 @@ function resize(){
 
 		m3.style.right = "-25%";
 		m4.style.left = "-23%";
+	}
+}
+
+// funcion para abrir el menu
+function abreMenu(){
+
+	var menu = document.getElementById('menu');
+	var boton = document.getElementById('botonMenu');
+
+	if(oculto == true){
+		menu.style.left = 0+'px';
+		boton.style.left = 132+'px';
+		boton.className = 'fa fa-times';
+		oculto = false;
+	}else{
+		menu.style.left = -132+'px';
+		boton.style.left = 0+'px';
+		boton.className = 'fa fa-bars';
+		oculto = true;
 	}
 }
