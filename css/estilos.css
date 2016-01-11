@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Track';
+  src: url('../font/Track/Track.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 main {
@@ -14,11 +20,12 @@ body {
 header div {
   position: absolute;
   top: 0;
+  left: 0;
   font-size: 2em !important;
   padding: 10px;
   cursor: pointer;
   z-index: 22;
-  transition: all 1.5s ease;
+  transition: left 1.5s ease;
 }
 header div:hover {
   color: aliceblue;
@@ -26,11 +33,15 @@ header div:hover {
 h1 {
   text-align: center;
   z-index: 20;
+  font-family: 'Track';
+  font-weight: normal;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 nav {
   position: absolute;
   top: 0;
-  left: -132px;
+  left: -135px;
   height: 100%;
   padding: 0 30px;
   background-color: #525252;
@@ -41,6 +52,8 @@ nav p {
   font-size: 1.5em;
   text-transform: uppercase;
   color: #fff;
+  letter-spacing: 1px;
+  font-family: sans-serif;
 }
 nav ul {
   padding: 0;
@@ -51,7 +64,10 @@ nav ul li {
 }
 nav ul li a {
   color: #fff;
+  font-family: 'Track';
+  font-weight: normal;
   text-decoration: none;
+  font-size: small;
 }
 nav ul li a:hover {
   /*text-decoration: underline;*/

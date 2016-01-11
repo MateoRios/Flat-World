@@ -103,11 +103,11 @@ function abreMenu(){
 
 	if(oculto == true){
 		menu.style.left = 0+'px';
-		boton.style.left = 132+'px';
+		boton.style.left = 135+'px';
 		boton.className = 'fa fa-times';
 		oculto = false;
 	}else{
-		menu.style.left = -132+'px';
+		menu.style.left = -135+'px';
 		boton.style.left = 0+'px';
 		boton.className = 'fa fa-bars';
 		oculto = true;
